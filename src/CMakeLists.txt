@@ -2,7 +2,7 @@ set(SOFTWARE spdlog)
 set(VERSION 1.11.0)
 set(ROOT $ENV{HOME}/ocp/external)
 
-set(spdlog_DIR ${ROOT}/${SOFTWARE}/${VERSION}/install/lib/cmake/spdlog)
+set(spdlog_DIR ${ROOT}/${SOFTWARE}/${VERSION}/install/default/lib/cmake/spdlog)
 find_package(spdlog)
 
 set(tkname ocptk)
