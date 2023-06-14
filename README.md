@@ -1,5 +1,8 @@
 # OpenCAX+ Toolkit Template
 
+[![Toolkit Build](https://github.com/OpenCAXPlus/ocptk/actions/workflows/build.yml/badge.svg)](https://github.com/OpenCAXPlus/ocptk/actions/workflows/build.yml)
+[![Toolkit Publish](https://github.com/OpenCAXPlus/ocptk/actions/workflows/publish.yml/badge.svg)](https://github.com/OpenCAXPlus/ocptk/actions/workflows/publish.yml)
+
 This is a template repository for OpenCAX+ toolkit, which is a plugin that connects any external source codes to the OpenCAX+ SDK and take the advantage of the whole OpenCAX+ ecosystem. 
 
 When the SDK use a toolkit, it will only know about the toolkit itself. It is the toolkit developers responsibility to create its dependencies on external projects. OCP only provides an online location for you to store the compressed file of external source codes.
