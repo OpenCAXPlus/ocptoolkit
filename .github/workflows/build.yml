@@ -9,7 +9,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ["self-hosted","cloud"]
     steps:
       - name: Basic info
         run: |
@@ -17,6 +17,7 @@ jobs:
           echo "Job triggered by ${{ github.event_name }}, on self-hosted ${{ runner.os }}."
       - name: Check out repository
         uses: actions/checkout@v3
+          # Option 2: specify 'latest' or 'latestrc' in the input version arguments:
       - name: Prepare and Install
         run: |
           tkname="ocptk"
