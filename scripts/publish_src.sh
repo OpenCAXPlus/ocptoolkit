@@ -11,7 +11,7 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 cd $script_dir/..
 
 # start the script
-rm $xzfile
+rm -f $xzfile
 tar -cJf $xzfile ocp/
 echo "Create compressed toolkit from ocp folder"
 rclone copy -P $xzfile ali:ocp-toolkit/$toolkit_id
