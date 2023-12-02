@@ -27,4 +27,4 @@ jobs:
       - name: Prepare and Install
         run: |
           source scripts/prepare.sh ${{ github.event.inputs.version }} ${{ github.event.inputs.id }}
-          source ocp/toolkit/${{ github.event.inputs.id }}/${{ github.event.inputs.version }}/config/install.sh linux-gnu-Debug
+          source ocp/toolkit/${{ github.event.inputs.id }}/${{ github.event.inputs.version }}/configurations/default.sh linux-gnu-Debug
