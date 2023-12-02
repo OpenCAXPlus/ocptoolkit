@@ -4,6 +4,15 @@ defaults:
     shell: bash -ileo pipefail {0}
 on:
   workflow_dispatch:
+    inputs:
+      id:
+        description: "Software id"
+        required: true
+        default: "ocptk"
+      version:
+        description: "Software version"
+        required: true
+        default: "1.11.0"
 jobs:
   build:
     runs-on: ["self-hosted","cloud"]
@@ -17,8 +26,5 @@ jobs:
           # Option 2: specify 'latest' or 'latestrc' in the input version arguments:
       - name: Prepare and Install
         run: |
-          tkname="ocptk"
-          current_date=$(date +"%Y.%m%d")
-          short_hash=$(git rev-parse --short HEAD)
-          source scripts/prepare.sh $tkname
-          source ocp/toolkit/$tkname/$current_date.$short_hash/config/install.sh linux-gnu-Debug
+          source scripts/prepare.sh ${{ github.event.inputs.version }} ${{ github.event.inputs.id }}
+          source ocp/toolkit/${{ github.event.inputs.id }}/${{ github.event.inputs.version }}/config/install.sh linux-gnu-Debug
