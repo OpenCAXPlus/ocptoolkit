@@ -3,7 +3,7 @@
 # You should create a configuration folder and copy this script
 # to the folder for actual installation.
 
-# config=$(basename "${BASH_SOURCE[0]}" .sh)
+config=$(basename "${BASH_SOURCE[0]}" .sh)
 preset=${1:-"linux-gnu-Release"}
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" &>/dev/null && pwd)"
 root="$script_dir/.."

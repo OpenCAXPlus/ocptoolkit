@@ -4,10 +4,11 @@ list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_SOURCE_DIR}/cmake)
 project(
   ocptk
   DESCRIPTION "The OpenCAX+ toolkit template"
-  LANGUAGES C CXX Fortran)
+  LANGUAGES C CXX Fortran
+  VERSION 0.1.0)
 
 include(CTest) # add ctest support
-include(Version) # set the versioning convention is YYYY.mmdd.commit_short_hash
+# include(Version) # set the versioning convention is YYYY.mmdd.commit_short_hash
 include(CPackConfig) # add cpack configuration from cmake folder
 # include(CPackSourceConfig)
 
